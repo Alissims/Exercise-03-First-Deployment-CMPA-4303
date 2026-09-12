@@ -23,4 +23,24 @@
   <h1>My First Deployment</h1>
   <p>This page proves my deployment pipeline works. More content coming soon!</p>
   <p>My site is live!</p>
+
+  <div style="margin-top: 30px;">
+    <label for="nameInput">Enter your name:</label>
+    <input type="text" id="nameInput" placeholder="Your name">
+    <button onclick="showGreeting()">Submit</button>
+    <p id="greetingOutput"></p>
+  </div>
+
+  <script>
+    function showGreeting() {
+      const name = document.getElementById("nameInput").value;
+      const output = document.getElementById("greetingOutput");
+      if (name.trim() === "") {
+        output.textContent = "Please enter your name first!";
+      } else {
+        output.textContent = "Hello, " + name + "! Thanks for visiting my page.";
+      }
+    }
+  </script>
 </body>
+</html>
